@@ -3,7 +3,6 @@
 
 #Function searching for queens in row, column and diagonals
 def LineChecker(row,column):
-
     for i in range(QUEENS_NUM):
         if board[row][i] == "Q":
             return False
@@ -21,7 +20,6 @@ def LineChecker(row,column):
 
 #Fuction placing queens on board using backtracking
 def Placement(column):
-
     if column >= QUEENS_NUM:
         return True
 
