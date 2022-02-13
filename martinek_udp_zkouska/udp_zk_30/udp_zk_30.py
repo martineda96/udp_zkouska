@@ -1,6 +1,7 @@
 #Simpson's approximation of integral
 #David Martínek, 2022
 
+from cmath import inf
 from math import e
 
 #Function that is solved (e**x can be substituted with any other continuous and differentiable function)
@@ -8,24 +9,29 @@ def F(x):
     value = float(e**x)
     return value
 
+#Pre-definitoned variables in case of reverse input 
+c = 0
+d = inf
+
 #User-selected inputs
 try:
-    a = int(input("Zvolte dolní mez integrálu a:"))
-    b = int(input("Zvolte horní mez integrálu b:"))
+    a = int(input("Zvolte dolní mez integrálu a: "))
+    b = int(input("Zvolte horní mez integrálu b: "))
     if a > b:
         c = a
         d = b
         a = d
         b = c
 
-    n = int(input("Zvolte počet podintervalů n:"))
+    n = int(input("Zvolte počet podintervalů n: "))
     while n <= 0:
-        n = int(input("Parametr n musí být kladný. Zadejte novou hodnotu:"))
+        n = int(input("Parametr n musí být kladný. Zadejte novou hodnotu: "))
         
 except ValueError:
     print("Hodnoty musí být zadány v podobě celého čísla.")
+    quit()
 
-#Inicial variables and calculation of h from inputs
+#Initial variables and calculation of h from inputs
 sum = 0
 h = (b - a)/n
 
