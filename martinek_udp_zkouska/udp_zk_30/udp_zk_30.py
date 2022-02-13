@@ -9,7 +9,7 @@ def F(x):
     value = float(e**x)
     return value
 
-#Pre-definitoned variables in case of reverse input 
+#Pre-definitioned variables in case of reverse input 
 c = 0
 d = inf
 
