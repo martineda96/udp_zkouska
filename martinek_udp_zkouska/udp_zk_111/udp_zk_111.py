@@ -8,10 +8,6 @@ def LineChecker(row,column):
             return False
 
     for i in range(QUEENS_NUM):
-        if board[i][column] == "Q":
-            return False
-
-    for i in range(QUEENS_NUM):
         for j in range(QUEENS_NUM):
             if board[i][j] == "Q":
                 if abs(i - row) == abs(j - column):
