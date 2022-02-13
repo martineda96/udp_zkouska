@@ -3,7 +3,6 @@
 
 from cmath import inf
 from math import e
-
 #Function that is solved (e**x can be substituted with any other continuous and differentiable function)
 def F(x):
     value = float(e**x)
@@ -43,7 +42,7 @@ for i in range(n+1):
         k = 2
     if i == 0 or i == n:
         k = 1
-    x = h*(i)
+    x = a+(h*(i))
     step_i_result= k*F(x)
     sum += step_i_result
 
